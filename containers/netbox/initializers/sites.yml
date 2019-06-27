@@ -1,0 +1,25 @@
+# 000_users.py
+# 010_groups.py
+# 020_custom_fields.py
+# 030_regions.py
+# 040_sites.py
+# 050_manufacturers.py
+# 060_device_types.py
+# 070_rack_roles.py
+# 080_racks.py
+# 090_device_roles.py
+# 100_platforms.py
+# 110_devices.py
+
+&dc
+#- name: DC-A
+#  slug: dc-a
+- name: $${name=DC-A; echo $name}
+  slug: dc-a
+  #echo "$a" | awk '{print tolower($0)}'
+  status: 1
+
+- <<: *dc
+  name: DC-B
+  slug: dc-b
+
